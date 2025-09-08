@@ -21,3 +21,34 @@
     width: 1.5rem;
     height: 1.5rem;
 }
+
+
+.contenedor-navbar-admin {
+    background-color: rgb(204, 200, 200);
+    width: 25vh;
+    height: 100vh; /*Utiliza la altura completa de la ventana*/
+    position: fixed; 
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 1rem;
+}
+
+
+.contenedor-titulo-navbar-admin {
+    margin-left: 10px;
+}
+
+
+/*PRODUCTOS*/
+.titulo-producto {
+    text-align: center;
+    margin: 2rem 0rem;
+}
+
+
+.card {
+    width: 18rem;
+}
