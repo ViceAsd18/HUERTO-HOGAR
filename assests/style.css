@@ -1,0 +1,23 @@
+/*BARRA DE NAVEGACION*/
+.contenedor-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: rgb(221, 214, 214);
+}
+
+.enlaces-navegacion {
+    display: flex;
+    justify-content: space-between;
+}
+
+.carrito-navegacion {
+    display: flex;
+    gap: 10px;  
+}
+
+.carrito-navegacion img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
