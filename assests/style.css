@@ -170,3 +170,8 @@ nav {
 .detalle-relacionados {
     margin-top: 2rem;
 }
+
+.detalle-contenedor-relacionados {
+    display: flex;
+    gap: 2rem;
+}
