@@ -1,55 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>registro_usuario</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>registro_usuario</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="assests/style.css">
+        <link rel="stylesheet" href="assests/style.css">
 
-</head>
-<body>
-    
-    <nav>
-        <div class="contenedor-navegacion">
-            <div class="titulo-navegacion">
-                <h3>HUERTO HOGAR</h3>
+    </head>
+    <body>
+        
+        <nav>
+            <div class="contenedor-navegacion">
+                <div class="titulo-navegacion">
+                    <h3>HUERTO HOGAR</h3>
+                </div>
+
+
+                <div class="enlaces-navegacion">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="home.html">Home</a>
+                    </div>
+
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="productos.html">Productos</a>
+                    </div>
+
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="nosotros.html">Nosotros</a>
+                    </div>
+
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="blog.html">Blogs</a>
+                    </div>
+
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="contacto.html">Contaco</a>
+                    </div>
+
+                </div>
+
+
+                <div class="carrito-navegacion">
+                    <p class="titulo-carrito">Carrito</p>
+                    <img src="assests/img/barra-navegacion/carrito-de-compras.png" alt="carrito de compras para el navabar">
+                </div>
             </div>
+        </nav>
 
-
-            <div class="enlaces-navegacion">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="home.html">Home</a>
-                </div>
-
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="productos.html">Productos</a>
-                </div>
-
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="nosotros.html">Nosotros</a>
-                </div>
-
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="blog.html">Blogs</a>
-                </div>
-
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="contacto.html">Contaco</a>
-                </div>
-
-            </div>
-
-
-            <div class="carrito-navegacion">
-                <p class="titulo-carrito">Carrito</p>
-                <img src="assests/img/barra-navegacion/carrito-de-compras.png" alt="carrito de compras para el navabar">
-            </div>
-
+        <div>
+            <p>nombre</p>
+            <input type="text" id="reg-name" required>
         </div>
-    </nav>
-
-</body>
+        <div>
+            <p>email</p>
+            <input type="text" id="reg-email" required>
+        </div>
+        <div>
+            <p>confirmar email</p>
+            <input type="text" id="reg-confirmation-email" required>
+        </div>
+        <div>
+            <p>contraseña</p>
+            <input type="text" id="reg-password" required>
+        </div>
+        <div>
+            <p>confirmar contraseña</p>
+            <input type="text" id="reg-confirmation-password" required>
+        </div>
+        <div>
+            <p>telefono</p>
+            <input type="text" id="reg-fono" required>
+        </div>
+        <div>
+            <button type="button" onclick="registrarUsuario(
+                document.getElementById('reg-name').value,
+                document.getElementById('reg-email').value,
+                document.getElementById('reg-confirmation-email').value,
+                document.getElementById('reg-password').value,
+                document.getElementById('reg-confirmation-password').value,
+                document.getElementById('reg-fono').value
+            )">Registrar Usuario</button>
+        </div>
+        <script src="scriptResgister.js"></script>
+    </body>
 </html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Lo quieres, te lo vendo</title>
+   
+</head>
+    <body>
+
+        <div>
+            <p>Nombre</p>
+            <input type="text" id="creation-name-usr" required>
+        </div>  
+        <div>
+            <p>Email</p>
+            <input type="text" id="creation-email-usr" maxlength="100" required>
+        </div> 
+        <div>
+            <p>Confirma email</p>
+            <input type="text" id="creation-confirmation-email-usr" required>
+        </div>
+        <div>
+            <p>Contraseña</p>
+            <input type="password" id="creation-password-usr" minlength="4" maxlength="10" required>
+        </div>
+        <div>
+            <p>Confirma contraseña</p>
+            <input type="password" id="creation-confirmation-password-usr" minlength="4" maxlength="10" required>
+        </div>
+        <div>
+            <p>Teléfono (opcional)</p>
+            <input type="text" id="creation-fono">
+        </div>
+        <div>
+            <button type="button" onclick=" registrarUsuario(
+                document.getElementById('creation-name-usr').value,
+                document.getElementById('creation-email-usr').value,
+                document.getElementById('creation-confirmation-email-usr').value,
+                document.getElementById('creation-password-usr').value,
+                document.getElementById('creation-confirmation-password-usr').value,
+                document.getElementById('creation-fono').value
+            )">crear Usuario</button>
+        </div>
+
+        <h2>creationistro de alimento</h2>
+        <div>
+            <p>Nombre del alimento</p>
+            <input type="text" id="ali-nombre" required>
+        </div>
+        <div>
+            <p>Precio</p>
+            <input type="number" id="ali-precio" required>
+        </div>
+        <div>
+            <button type="button" onclick="registrarAlimento(
+                document.getElementById('ali-nombre').value,
+                document.getElementById('ali-precio').value
+            )">creationistrar Alimento</button>
+        </div>
+
+        <h2>Usuarios creationistrados</h2>
+        <ul id="lista-usuarios"></ul>
+
+        <h2>Alimentos creationistrados</h2>
+        <ul id="lista-alimentos"></ul>
+
+    <script src="scriptHomeAdmin.js"></script>
+    </body>
+</html>

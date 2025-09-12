@@ -10,121 +10,125 @@
     <link rel="stylesheet" href="assests/style.css">
 
 </head>
-<body>
+    <body onload="inicializarMenu()">
 
-        <nav>
-        <div class="contenedor-navegacion">
-            <div class="titulo-navegacion">
-                <h3>HUERTO HOGAR</h3>
+            <nav>
+            <div class="contenedor-navegacion">
+                <div class="titulo-navegacion">
+                    <h3>HUERTO HOGAR</h3>
+                </div>
+
+
+                <div class="enlaces-navegacion">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="home.html">Home</a>
+                    </div>
+
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="productos.html">Productos</a>
+                    </div>
+
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="nosotros.html">Nosotros</a>
+                    </div>
+
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="blog.html">Blogs</a>
+                    </div>
+
+                    <div class="container-fluid" >
+                        <a class="navbar-brand" href="contacto.html">Contacto</a>
+                    </div>
+                    <!--link que solo muestra a @profesoradmin-->
+                    <div id="link-profesor" style="display:none; margin-top:20px;">
+                        <a href="Home_admin.html"></a>
+    </div>
+
+                </div>
+
+
+                <div class="carrito-navegacion">
+                    <a class="navbar-brand" href="carrito.html">Carrito</a>
+                    <img src="assests/img/barra-navegacion/carrito-de-compras.png" alt="carrito de compras para el navabar">
+                    <p></p>
+                </div>
             </div>
+        </nav>
 
 
-            <div class="enlaces-navegacion">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="home.html">Home</a>
-                </div>
+    <main id="contenido-principal">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Productos frescos a la puerta de tu casa</h1>
+            </div>
+        </section>
 
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="productos.html">Productos</a>
-                </div>
+        <!-- Productos -->
+        <section class="productos">
+            <h2>Productos...</h2>
+            <div class="grid">
 
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="nosotros.html">Nosotros</a>
-                </div>
+                <article>
+                    <div class="card">
+                        <img src="assests/img/productos/manzana-fuji/manzana-fuji-1.png" alt="Manzana Fuji">
+                        <h3>Manzana Fuji</h3>
+                        <p>$1.200 kg</p>
+                    </div>
+                </article>
 
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="blog.html">Blogs</a>
-                </div>
+                <article>
+                    <div class="card">
+                        <img src="assests/img/productos/naranja-valencia/naranja-valencia-1.png" alt="Naranjas Valencia">
+                        <h3>Naranjas Valencia</h3>
+                        <p>$1.000 kg</p>
+                    </div>
+                </article>
 
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="contacto.html">Contacto</a>
-                </div>
+                <article>
+                    <div class="card">
+                        <img src="assests/img/productos/platanos-cavendish/platanos-cavendish-1.jpg" alt="Platanos Cavendish">
+                        <h3>Plátanos Cavendish</h3>
+                        <p>$800 kg</p>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="card">
+                        <img src="assests/img/productos/zanahoria-organica/zanahoria-organica-1.jpg" alt="Zanahoria Organica">
+                        <h3>Zanahoria Orgánica</h3>
+                        <p>$900 kg</p>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="card">
+                        <img src="assests/img/productos/espinacas-frescas/espinacas-frescas-1.jpg" alt="Espinacas Frescas">
+                        <h3>Espinacas Frescas</h3>
+                        <p>$700 1/2kg</p>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="card">
+                        <img src="assests/img/productos/pimiento-tricolor/pimiento-tricolor-1.jpg" alt="Pimiento Tricolor">
+                        <h3>Pimientos tricolores</h3>
+                        <p>$1.500 kg</p>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="card">
+                        <img src="assests/img/productos/miel-organica/miel-organica-1.jpg" alt="Miel Organica">
+                        <h3>Miel Orgánica</h3>
+                        <p>$5.000 1/2kg</p>
+                    </div>
+                </article>
 
             </div>
+        </section>
+    </main>
 
-
-            <div class="carrito-navegacion">
-                <a class="navbar-brand" href="carrito.html">Carrito</a>
-                <img src="assests/img/barra-navegacion/carrito-de-compras.png" alt="carrito de compras para el navabar">
-                <p></p>
-            </div>
-        </div>
-    </nav>
-
-
-<main id="contenido-principal">
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Productos frescos a la puerta de tu casa</h1>
-        </div>
-    </section>
-
-    <!-- Productos -->
-    <section class="productos">
-        <h2>Productos...</h2>
-        <div class="grid">
-
-            <article>
-                <div class="card">
-                    <img src="assests/img/productos/manzana-fuji/manzana-fuji-1.png" alt="Manzana Fuji">
-                    <h3>Manzana Fuji</h3>
-                    <p>$1.200 kg</p>
-                </div>
-            </article>
-
-            <article>
-                <div class="card">
-                    <img src="assests/img/productos/naranja-valencia/naranja-valencia-1.png" alt="Naranjas Valencia">
-                    <h3>Naranjas Valencia</h3>
-                    <p>$1.000 kg</p>
-                </div>
-            </article>
-
-            <article>
-                <div class="card">
-                    <img src="assests/img/productos/platanos-cavendish/platanos-cavendish-1.jpg" alt="Platanos Cavendish">
-                    <h3>Plátanos Cavendish</h3>
-                    <p>$800 kg</p>
-                </div>
-            </article>
-
-            <article>
-                <div class="card">
-                    <img src="assests/img/productos/zanahoria-organica/zanahoria-organica-1.jpg" alt="Zanahoria Organica">
-                    <h3>Zanahoria Orgánica</h3>
-                    <p>$900 kg</p>
-                </div>
-            </article>
-
-            <article>
-                <div class="card">
-                    <img src="assests/img/productos/espinacas-frescas/espinacas-frescas-1.jpg" alt="Espinacas Frescas">
-                    <h3>Espinacas Frescas</h3>
-                    <p>$700 1/2kg</p>
-                </div>
-            </article>
-
-            <article>
-                <div class="card">
-                    <img src="assests/img/productos/pimiento-tricolor/pimiento-tricolor-1.jpg" alt="Pimiento Tricolor">
-                    <h3>Pimientos tricolores</h3>
-                    <p>$1.500 kg</p>
-                </div>
-            </article>
-
-            <article>
-                <div class="card">
-                    <img src="assests/img/productos/miel-organica/miel-organica-1.jpg" alt="Miel Organica">
-                    <h3>Miel Orgánica</h3>
-                    <p>$5.000 1/2kg</p>
-                </div>
-            </article>
-
-        </div>
-    </section>
-</main>
-
-    
-</body>
+        <script src="scriptHome.js"></script>   
+    </body>
 </html>
