@@ -210,3 +210,141 @@ nav {
     display: flex;
     gap: 2rem;
 }
+
+
+/* DETALLE BLOG 1 */
+
+.hero1 {
+    height: 40vh;
+    margin-top: 1rem;
+    background: url("img/detalle-blog-1.jpg") 50% 40% no-repeat ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.hero-content1 {
+    margin-top:2rem;
+    background: rgba(89, 78, 78, 0.5);
+    padding: 1rem;
+    border-radius: 10px;
+}
+.hero h1 {
+    font-size: 7rem;
+    margin: 10px;
+    font-family: 'Protest Riot', cursive, 'Segoe UI', Arial, sans-serif;}
+.hero p {
+    font-size: 1.2rem;
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+
+.container-video1 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.detalle-blog1 {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+    padding: 1rem 3rem;
+    max-width: 2000px;
+}
+
+.info-blog1 h2 {
+    font-size: 40px;
+    line-height: 1.6;
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    color: #333;
+    background: #f9f9f9;
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+}
+.info-blog1 p{
+    font-size: 2rem ;
+    text-align: justify;
+}
+
+.info-blog1 ol{
+    font-size: 1.5rem;
+    line-height: 2;
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    padding: 5rem;
+    text-align: justify;
+}
+
+.info-blog1 li{
+    margin-bottom: 1rem;
+}
+
+
+/* DETALLE BLOG 2 */
+.hero2 {
+    height: 40vh;
+    margin-top: 1rem;
+    background: url("img/detalle-blog-2.jpg") 50% 40% no-repeat ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.hero-content1 {
+    margin-top:2rem;
+    background: rgba(89, 78, 78, 0.5);
+    padding: 1rem;
+    border-radius: 10px;
+}
+.hero h1 {
+    font-size: 7rem;
+    margin: 10px;
+    font-family: 'Protest Riot', cursive, 'Segoe UI', Arial, sans-serif;}
+.hero p {
+    font-size: 1.2rem;
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+
+.container-video2 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.detalle-blog2 {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+    padding: 1rem 3rem;
+    max-width: 2000px;
+}
+
+.info-blog2 h2 {
+    font-size: 40px;
+    line-height: 1.6;
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    color: #333;
+    background: #f9f9f9;
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+}
+.info-blog2 p{
+    font-size: 2rem ;
+    text-align: justify;
+}
+
+.info-blog2 ol{
+    font-size: 1.5rem;
+    line-height: 2;
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    padding: 5rem;
+    text-align: justify;
+}
+
+.info-blog2 li{
+    margin-bottom: 1rem;
+}
