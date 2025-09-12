@@ -12,7 +12,7 @@
 </head>
 <body>
     
-        <nav>
+    <nav>
         <div class="contenedor-navegacion">
             <div class="titulo-navegacion">
                 <h3>HUERTO HOGAR</h3>
@@ -44,17 +44,50 @@
 
 
             <div class="carrito-navegacion">
-                <p class="titulo-carrito">Carrito</p>
+                <a class="navbar-brand" href="carrito.html">Carrito</a>
                 <img src="assests/img/barra-navegacion/carrito-de-compras.png" alt="carrito de compras para el navabar">
                 <p></p>
             </div>
         </div>
     </nav>
 
-    <main>
-        <div id="detalle-producto">
-          
+    <main id="detalle-producto">
+        <!-- IZQUIERDA -->
+        <section class="detalle-imagenes">
+            <div class="detalle-imagen-principal">
+            <img id="img-principal" src="" alt="">
         </div>
+
+        <div id="miniaturas" class="miniaturas">
+            <!-- ACA SE AGREGAN LAS IMAGENES SECUNDARIAS DEL PRODUCTO -->
+        </div>
+        </section>
+
+        <!-- DERECHA -->
+        <aside class="detalle-info">
+            <header class="titulo-precio">
+                <h1 id="titulo"></h1>
+                <span class="precio" id="precio"></span>
+            </header>
+
+            <p class="detalle-descripcion" id="descripcion"></p>
+
+            <div class="detalle-acciones">
+                <label for="cantidad">Cantidad</label>
+                <input type="number" id="cantidad" min="1" value="1">
+            </div>
+
+            <button id="btn-añadir-detalle" class="btn btn-primary">Añadir</button>
+        </aside>
+
+        <!-- RELACIONADOS -->
+        <section class="detalle-relacionados">
+            <h2>Productos relacionados</h2>
+        <div id="contenedor-relacionados" class="detalle-contenedor-relacionados">
+
+        </div>
+        </section>
+
     </main>
 
 
