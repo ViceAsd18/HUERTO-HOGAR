@@ -41,13 +41,48 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 1rem;
+    border-right: 2px solid black;
+    align-items: center;
 }
 
-
-.contenedor-titulo-navbar-admin {
-    margin-left: 10px;
+.contenedor-titulo-navbar-admin img {
+    width: 232px;
 }
+
+.contenedor-enlaces-admin {
+    width: 100%;
+}
+
+.container-fluid-admin {
+    margin: 1.5rem 0px 0rem 1.5rem;   
+
+}
+
+.container-fluid-admin a img {
+    margin-right: 8px;
+}
+
+.container-fluid-admin a{
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+}
+
+.contenedor-enlaces-admin img {
+    width: 2rem;
+    height: 2rem;
+
+
+}
+
+.titulo-navbar-admin {
+    margin: 2rem 0rem;
+    font-size: 22px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
 
 
 /*PRODUCTOS*/
