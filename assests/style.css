@@ -211,6 +211,40 @@ nav {
     gap: 2rem;
 }
 
+/*VISTA ADMIN*/
+/*LISTA USUARIOS*/
+.header-lista-usuario h1{
+
+}
+
+.contenedor-lista-usuario {
+    margin:0px 150px 0px 300px;
+    margin-top: 3rem;
+    padding: 1rem;
+}
+
+
+
+.header-titulo-lista-usuario {
+    display: flex;
+    gap: 20px;
+}
+
+.header-titulo-lista-usuario button {
+    background-color: black;
+    padding: 1.5rem;
+}
+
+.header-lista-usuario {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-notificacion img {
+    width: 30px;
+    height: 30px;
+}
+
 
 /* DETALLE BLOG 1 */
 
