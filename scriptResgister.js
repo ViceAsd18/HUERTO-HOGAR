@@ -27,7 +27,7 @@ function confirmarContraseña(passx1,passx2) {
 }
 
 
-function registrarUsuario(name,emailx1,emailx2,passx1,passx2,cel){
+function registrarUsuario(run,name,lastName,emailx1,emailx2,passx1,passx2,BirthDate,region,commune){
     
     if(!validarEmail(emailx1)) return;
     if(!confirmarEmail(emailx1,emailx2)) return;
@@ -38,7 +38,7 @@ function registrarUsuario(name,emailx1,emailx2,passx1,passx2,cel){
         alert("Usuario registrado correctamente")
         return;
     }
-    usuarios.push({nombre:name,correo:emailx1,password:passx1,telefono:cel})
+    usuarios.push({run,name,lastName,correo:email,password: pass,fechaNacimiento: BirthDate,region,commune});
     //guardamos y actualizamos a JSON
     localStorage.setItem("usuarios",JSON.stringify(usuarios))
     alert("Usuario registrado")
