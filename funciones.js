@@ -151,6 +151,28 @@ document.addEventListener('DOMContentLoaded', () => {
   if (descripcion) descripcion.textContent = p.desc;
   if (cantidad) cantidad.max = p.stock;
 
+  // BOTONES DE COMPARTIR
+  const contCompartir = document.querySelector('.detalle-compartir');
+  if (contCompartir && p) {
+    const urlProducto = window.location.href;
+
+    contCompartir.innerHTML = `
+    <button class="btn-compartir" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(urlProducto)}', '_blank')">
+        <img src="assests/img/redes-sociales/logo-facebook.png" alt="Facebook" class="icono-red">
+    </button>
+    <button class="btn-compartir" onclick="window.open('https://twitter.com/intent/tweet?url=${encodeURIComponent(urlProducto)}&text=${encodeURIComponent(p.nombre)}', '_blank')">
+        <img src="assests/img/redes-sociales/logo-x.png" alt="Twitter" class="icono-red">
+    </button>
+    <button class="btn-compartir" onclick="window.open('https://api.whatsapp.com/send?text=${encodeURIComponent(p.nombre + ' ' + urlProducto)}', '_blank')">
+        <img src="assests/img/redes-sociales/logo-wsp.png" alt="WhatsApp" class="icono-red">
+    </button>
+    <button class="btn-compartir" onclick="window.open('https://t.me/share/url?url=${encodeURIComponent(urlProducto)}&text=${encodeURIComponent(p.nombre)}', '_blank')">
+        <img src="assests/img/redes-sociales/logo-telegram.png" alt="Telegram" class="icono-red">
+    </button>
+
+`;
+  }
+
   //Agregar las miniaturas de las imagenes 
   const mini = document.getElementById('miniaturas');
   if (mini) {

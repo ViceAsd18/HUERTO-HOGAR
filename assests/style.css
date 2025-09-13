@@ -176,9 +176,13 @@ nav {
 }
 
 #btn-añadir-detalle {
+    background: linear-gradient(135deg, #2E8B57, #3CB371);
     width: 100%;
     margin-top: 2rem;
     padding: 1rem;
+}
+#btn-añadir-detalle:hover {
+    background: linear-gradient(135deg, #246b45, #2fa673);
 }
 
     /*Miniatura bajo la imagen principal*/
@@ -209,6 +213,28 @@ nav {
 .detalle-contenedor-relacionados {
     display: flex;
     gap: 2rem;
+}
+
+.detalle-compartir {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-compartir {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.btn-compartir:hover {
+    opacity: 0.7;
+}
+
+.icono-red {
+    width: 35px;
+    height: 35px;
 }
 
 /*VISTA ADMIN*/
@@ -321,7 +347,7 @@ nav {
 .hero1 {
     height: 40vh;
     margin-top: 1rem;
-    background: url("img/detalle-blog-1.jpg") 50% 40% no-repeat ;
+    background: url("img/blog/detalle-blog-1.jpg") 50% 40% no-repeat ;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -399,7 +425,7 @@ nav {
 .hero2 {
     height: 40vh;
     margin-top: 1rem;
-    background: url("img/detalle-blog-2.jpg") 50% 40% no-repeat ;
+    background: url("img/blog/detalle-blog-2.jpg") 50% 40% no-repeat ;
     display: flex;
     align-items: center;
     justify-content: center;
