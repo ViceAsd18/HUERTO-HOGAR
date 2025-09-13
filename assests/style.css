@@ -245,6 +245,76 @@ nav {
     height: 30px;
 }
 
+/* Blog */
+.container-noticias{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin-left: 18rem;
+    gap: 3rem;
+    padding: 3rem;
+    max-width: 1000px;
+}
+
+
+.card-noticia {
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 50rem;
+    height: 100%;
+    margin: 1rem 0rem;
+
+}
+
+.card-noticia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+}
+
+/* Títulos */
+.card-noticia h2 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    color: #8B4513;
+}
+
+/* Texto */
+.card-noticia p {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin-bottom: 1.2rem;
+}
+
+/* Botón */
+.btn-navbar-blog {
+    display: block;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #2E8B57, #3CB371);
+    border: none;
+    padding: 0.7rem 3rem;
+    border-radius: 4rem;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-navbar-blog:hover {
+    background: linear-gradient(135deg, #246b45, #2fa673);
+}
+
+
 
 /* DETALLE BLOG 1 */
 
@@ -258,26 +328,25 @@ nav {
     text-align: center;
     color: white;
 }
+.hero1 h1{
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 3.5rem;
+    margin:20px 0px;
+}
+
 .hero-content1 {
     margin-top:2rem;
     background: rgba(89, 78, 78, 0.5);
-    padding: 1rem;
+    padding: 3rem;
     border-radius: 10px;
 }
-.hero h1 {
-    font-size: 7rem;
-    margin: 10px;
-    font-family: 'Protest Riot', cursive, 'Segoe UI', Arial, sans-serif;}
-.hero p {
-    font-size: 1.2rem;
-    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
-}
 
-.container-video1 {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    margin-bottom: 3rem;
+
+.hero1 p {
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .detalle-blog1 {
@@ -289,30 +358,40 @@ nav {
 }
 
 .info-blog1 h2 {
-    font-size: 40px;
+    font-size: 30px;
     line-height: 1.6;
-    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
-    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    color: #8B4513;
     background: #f9f9f9;
     padding: 2.5rem;
     border-radius: 12px;
     text-align: center;
 }
 .info-blog1 p{
-    font-size: 2rem ;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px ;
+    color: #333333;
     text-align: justify;
 }
 
 .info-blog1 ol{
-    font-size: 1.5rem;
-    line-height: 2;
-    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
     padding: 5rem;
-    text-align: justify;
 }
 
 .info-blog1 li{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    line-height: 2;
+    color: #333333;
+    text-align: justify;
     margin-bottom: 1rem;
+}
+
+.container-video1 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 3rem;
 }
 
 
@@ -327,25 +406,23 @@ nav {
     text-align: center;
     color: white;
 }
+.hero2 h1{
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 3.5rem;
+    margin:20px 0px;
+}
 .hero-content1 {
     margin-top:2rem;
     background: rgba(89, 78, 78, 0.5);
-    padding: 1rem;
+    padding: 3rem;
     border-radius: 10px;
 }
-.hero h1 {
-    font-size: 7rem;
-    margin: 10px;
-    font-family: 'Protest Riot', cursive, 'Segoe UI', Arial, sans-serif;}
-.hero p {
-    font-size: 1.2rem;
-    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
-}
 
-.container-video2 {
-    display: flex;
-    align-content: center;
-    justify-content: center;
+.hero2 p{
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .detalle-blog2 {
@@ -357,28 +434,59 @@ nav {
 }
 
 .info-blog2 h2 {
-    font-size: 40px;
+    font-size: 30px;
     line-height: 1.6;
-    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
-    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    color: #8B4513;
     background: #f9f9f9;
     padding: 2.5rem;
     border-radius: 12px;
     text-align: center;
 }
+.info-blog2 h3{
+    font-size: 30px;
+    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+    color: #8B4513;
+}
+.info-blog2 h4{
+    font-size: 30px;
+    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+    color: #8B4513;
+}
+.info-blog2 h5{
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+    color: #8B4513;
+
+}
 .info-blog2 p{
-    font-size: 2rem ;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px ;
+    color: #333333;
     text-align: justify;
 }
 
 .info-blog2 ol{
-    font-size: 1.5rem;
-    line-height: 2;
-    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
     padding: 5rem;
-    text-align: justify;
 }
 
-.info-blog2 li{
+.info-blog2 li {
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    line-height: 1;
+    text-align: justify;
     margin-bottom: 1rem;
+    font-size: 25px;
+
+}
+
+.container-video2 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 3rem;
 }
