@@ -36,6 +36,11 @@ const productos = [
   ];
 
 
+
+
+
+
+
 //UTILIDADES
 function obtenerProductoPorId(id) {
   return productos.find(producto => producto.id === id);
@@ -48,6 +53,10 @@ function obtenerRelacionadosPorCategoria(idProducto) {
 
   return productos.filter(p => p.categoria === producto.categoria && p.id !== idProducto);
 }
+
+
+
+
 
 // FUNCIONES PARA MOSTRAR PRODUCTOS EN EL HTML
 // =========================================
