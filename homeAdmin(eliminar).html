@@ -8,40 +8,92 @@
 </head>
     <body>
 
-        <div>
-            <p>Nombre</p>
-            <input type="text" id="creation-name-usr" required>
-        </div>  
-        <div>
-            <p>Email</p>
-            <input type="text" id="creation-email-usr" maxlength="100" required>
-        </div> 
-        <div>
-            <p>Confirma email</p>
-            <input type="text" id="creation-confirmation-email-usr" required>
-        </div>
-        <div>
-            <p>Contraseña</p>
-            <input type="password" id="creation-password-usr" minlength="4" maxlength="10" required>
-        </div>
-        <div>
-            <p>Confirma contraseña</p>
-            <input type="password" id="creation-confirmation-password-usr" minlength="4" maxlength="10" required>
-        </div>
-        <div>
-            <p>Teléfono (opcional)</p>
-            <input type="text" id="creation-fono">
-        </div>
-        <div>
-            <button type="button" onclick=" registrarUsuario(
-                document.getElementById('creation-name-usr').value,
-                document.getElementById('creation-email-usr').value,
-                document.getElementById('creation-confirmation-email-usr').value,
-                document.getElementById('creation-password-usr').value,
-                document.getElementById('creation-confirmation-password-usr').value,
-                document.getElementById('creation-fono').value
-            )">crear Usuario</button>
-        </div>
+    <div>
+        <p>RUN</p>
+        <input type="text" id="creation-run" minlength="7" maxlength="9" required placeholder="Ej: 19011022K">
+    </div>
+
+    <div>
+        <p>Nombre</p>
+        <input type="text" id="creation-name-usr" maxlength="50" required>
+    </div>  
+
+    <div>
+        <p>Apellidos</p>
+        <input type="text" id="creation-apellido-usr" maxlength="100" required>
+    </div>  
+
+    <div>
+        <p>Email</p>
+        <input type="text" id="creation-email-usr" maxlength="100" required>
+    </div> 
+
+    <div>
+        <p>Confirma email</p>
+        <input type="text" id="creation-confirmation-email-usr" required>
+    </div>
+
+    <div>
+        <p>Contraseña</p>
+        <input type="password" id="creation-password-usr" minlength="4" maxlength="10" required>
+    </div>
+
+    <div>
+        <p>Confirma contraseña</p>
+        <input type="password" id="creation-confirmation-password-usr" minlength="4" maxlength="10" required>
+    </div>
+
+    <div>
+        <p>Teléfono (opcional)</p>
+        <input type="text" id="creation-fono">
+    </div>
+
+    <div>
+        <p>Fecha Nacimiento (opcional)</p>
+        <input type="date" id="creation-fecha-nac">
+    </div>
+
+    <div>
+        <p>Dirección</p>
+        <input type="text" id="creation-direccion" maxlength="300" required>
+    </div>
+
+    <div>
+        <p>Tipo de Usuario</p>
+        <select id="creation-tipo-usr">
+            <option value="Administrador">Administrador</option>
+            <option value="Cliente">Cliente</option>
+            <option value="Vendedor">Vendedor</option>
+        </select>
+    </div>
+
+    <div>
+        <p>Región</p>
+        <input type="text" id = "creation-region">
+    </div>
+
+    <div>
+        <p>Comuna</p>
+        <input type="text" id = "creation-comuna">
+    </div>
+
+    <div>
+        <button type="button" onclick=" registrarUsuario(
+            document.getElementById('creation-run').value,
+            document.getElementById('creation-name-usr').value,
+            document.getElementById('creation-apellido-usr').value,
+            document.getElementById('creation-email-usr').value,
+            document.getElementById('creation-confirmation-email-usr').value,
+            document.getElementById('creation-password-usr').value,
+            document.getElementById('creation-confirmation-password-usr').value,
+            document.getElementById('creation-fono').value,
+            document.getElementById('creation-fecha-nac').value,
+            document.getElementById('creation-direccion').value,
+            document.getElementById('creation-tipo-usr').value,
+            document.getElementById('creation-region').value,
+            document.getElementById('creation-comuna').value
+        )">Crear Usuario</button>
+    </div>
 
         <h2>creationistro de alimento</h2>
         <div>
