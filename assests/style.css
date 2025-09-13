@@ -1,58 +1,54 @@
-/*REGISTRO USUARIO (VISTA CLIENTE)*/
-.main-form {
-    min-height: 100vh;            /* ocupa alto visible */
-    display: flex;
-    justify-content: center;      /* centra horizontal */
-    align-items: center;          /* centra vertical */
-    padding: 24px;                /* respiro en bordes */
-    background: #f5f5f5;          /* gris suave de fondo (opcional) */
+/*REGISTRO*/
+.main-form{
+  padding: 32px 24px;
+  background: #f5f6f8;                 /* fondo suave tipo mock */
+  display: block;
 }
 
-/* La “card” del formulario */
-.registro-usuario {
-    width: 100%;
-    max-width: 800px;             
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,.06);
-    padding: 20px 18px;
+/* Card centrada */
+.registro-usuario{
+  max-width: 820px;                     /* ancho del contenedor grande */
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #dcdfe5;
+  border-radius: 8px;
+  padding: 28px 32px;
+  box-shadow: 0 3px 10px rgba(0,0,0,.04);
 }
 
-.form-registro h2 {
-    margin: 0 0 12px;
-    font-size: 20px;
-    text-align: center;
-    color: #222;
+.form-registro{
+  max-width: 560px;                     /* ancho de la columna central */
+  margin: 0 auto;
 }
 
-.form-registro .col-12 { 
-    margin-bottom: 12px; 
+.form-registro h2{
+    margin: 0 0 16px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #374151;
+    background: #eef1f5;
+    border: 1px solid #e3e7ee;
+    border-radius: 6px;
+    padding: 10px 12px;
 }
 
-.form-label {
+.form-registro .col-12{
+    margin-bottom: 12px;
+}
+
+.form-label{
     display: block;
     margin-bottom: 4px;
     font-size: 14px;
     color: #333;
 }
-
-.form-control {
+.form-control{
     width: 100%;
     padding: 10px 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 15px;
-    outline: none;
     background: #fff;
-}
-
-.form-registro button {
-    width: 40%;
-    padding: 20px 20px;
-    display: block;
-    margin: 3.5rem auto 0; 
-
 }
 
 .contenedor-region-comuna {
@@ -60,12 +56,16 @@
     justify-content: space-between;
 }
 
-
-
+.registro-usuario button {
+    display: block;
+    margin: 20px auto 0;   
+    padding: 1rem 1rem;   /* opcional */
+    width: 35%;
+}
 
 
 /*BARRA DE NAVEGACION*/
-nav {
+.nav-cliente {
     position: sticky;               /* se queda fija */
     top: 0;                        /* pegada arriba */
     width: 100%;                   /* ocupa todo el ancho */  
@@ -277,40 +277,6 @@ nav {
     gap: 2rem;
 }
 
-/*VISTA ADMIN*/
-/*LISTA USUARIOS*/
-.header-lista-usuario h1{
-
-}
-
-.contenedor-lista-usuario {
-    margin:0px 150px 0px 300px;
-    margin-top: 3rem;
-    padding: 1rem;
-}
-
-
-
-.header-titulo-lista-usuario {
-    display: flex;
-    gap: 20px;
-}
-
-.header-titulo-lista-usuario button {
-    background-color: black;
-    padding: 1.5rem;
-}
-
-.header-lista-usuario {
-    display: flex;
-    justify-content: space-between;
-}
-
-.header-notificacion img {
-    width: 30px;
-    height: 30px;
-}
-
 
 /* DETALLE BLOG 1 */
 
@@ -448,4 +414,3 @@ nav {
 .info-blog2 li{
     margin-bottom: 1rem;
 }
-
