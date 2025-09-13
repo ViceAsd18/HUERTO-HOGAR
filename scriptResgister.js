@@ -27,21 +27,24 @@ function confirmarContraseña(passx1,passx2) {
 }
 
 
-function registrarUsuario(run,name,lastName,emailx1,emailx2,passx1,passx2,BirthDate,region,commune){
+function registrarUsuario(run,name,lastName,emailx1,emailx2,passx1,passx2,BirthDate,region,commune,rol){
     
-    if(!validarEmail(emailx1)) return;
-    if(!confirmarEmail(emailx1,emailx2)) return;
-    if(!confirmarContraseña(passx1,passx2)) return;
+    if(!validarEmail(emailx1)) return false;
+    if(!confirmarEmail(emailx1,emailx2)) return false;
+    if(!confirmarContraseña(passx1,passx2)) return false;
 
     const usuarios = JSON.parse(localStorage.getItem("usuarios")) || []
     if (usuarios.find(u => u.correo === emailx1)){
         alert("Usuario registrado correctamente")
         return;
     }
-    usuarios.push({run,name,lastName,correo:email,password: pass,fechaNacimiento: BirthDate,region,commune});
+      // Guardar (usar los nombres correctos)
+  usuarios.push({run,name,lastName, correo: emailx1, password: passx1, fechaNacimiento: BirthDate || null, region, commune, rol
+  });
     //guardamos y actualizamos a JSON
     localStorage.setItem("usuarios",JSON.stringify(usuarios))
     alert("Usuario registrado")
+    return true
 
 }
 
@@ -109,3 +112,38 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
+const formulario = document.getElementById('form-registro');
+  formulario.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const run        = document.getElementById('run').value;
+    const name       = document.getElementById('nombre').value;
+    const lastName   = document.getElementById('apellidos').value;
+    const email1     = document.getElementById('email').value;
+    const email2     = document.getElementById('confirm-email').value;
+    const pass1      = document.getElementById('password').value;
+    const pass2      = document.getElementById('confirmPassword').value;
+    const birthDate  = document.getElementById('nacimiento').value;
+    const region     = document.getElementById('region').value;
+    const commune    = document.getElementById('comuna').value;
+
+    // Llamar a la función que guarda en localStorage
+    const usuarioRegistrar = registrarUsuario(
+      run, name, lastName,
+      email1, email2,
+      pass1, pass2,
+      birthDate, region, commune,
+      "cliente"
+    );
+
+    // Si todo salió bien, limpio el formulario
+    if (usuarioRegistrar) {
+      formulario.reset();
+      document.getElementById('comuna').disabled = true;
+
+      //Redirigir al login
+      window.location.href = "login.html"
+
+    }
+  });
