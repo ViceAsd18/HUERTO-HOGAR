@@ -84,6 +84,33 @@ nav {
 }
 
 
+/* Home */
+.hero-home {
+    height: 70vh; /* alto visible */
+    background: url("assests/img/banner-home3.png") center center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+    margin-top:2rem;
+    background: rgba(89, 78, 78, 0.5);
+    padding: 4rem;
+    border-radius: 10px;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-family: 'Protest Riot', cursive, 'Segoe UI', Arial, sans-serif;}
+.hero p {
+    font-size: 1.2rem;
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+
 
 /*PRODUCTOS*/
 .titulo-producto {
@@ -515,4 +542,76 @@ nav {
     align-content: center;
     justify-content: center;
     margin-bottom: 3rem;
+}
+
+
+
+/*Footer*/
+.footer {
+    background-color: white;
+    color: #333333;
+    padding: 1rem 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-contenedor {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr 1fr; /* logo + 3 columnas */
+    gap: 1rem;
+    max-width: none;
+    margin: 0;
+}
+.footer-logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+.footer-logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+
+.footer-texto h3,
+.footer-texto p {
+    margin: 0;
+}
+
+.footer-col h3,
+.footer-col h4 {
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.footer-col p {
+    line-height: 1.5;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-col ul li a {
+    color: #333333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #2E8B57; /* verde estilo Huerto Hogar */
+}
+.footer-final {
+    text-align: center;
+    margin-top: 1rem;
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    color: #333333;
 }
