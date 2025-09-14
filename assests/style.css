@@ -434,3 +434,71 @@ min-height: 100vh;          /* ocupa toda la altura visible */
 .info-blog2 li{
     margin-bottom: 1rem;
 }
+
+
+/*ADMIN LISTAR USUARIOS*/
+.contenedor-lista-usuario {
+    margin: 2rem 5rem 0 20rem ;
+    padding: 2rem;
+}
+
+.header-lista-usuario {
+    display: flex;
+}
+
+.header-titulo-lista-usuario {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.header-titulo-lista-usuario a{
+    padding: 1.5rem;
+}
+
+.header-titulo-lista-usuario a:hover{
+    background-color: #0056b3;
+}
+
+
+
+    /* TABLA LISTADO USUARIOS */
+.tabla-usuarios {
+    margin-top: 20px;
+    overflow-x: auto;
+    border: 2px solid black;
+}
+
+
+.tabla-usuarios table {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.tabla-usuarios th, .tabla-usuarios td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    font-size: 14px;
+}
+
+.tabla-usuarios th {
+    background: #f5f6f8;
+    font-weight: bold;
+}
+
+.btn-eliminar-usuario-admin {
+    background: red;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-eliminar-usuario-admin:hover {
+  background: darkred;
+}
+

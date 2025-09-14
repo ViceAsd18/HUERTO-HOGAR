@@ -44,7 +44,10 @@ function registrarUsuario(run, nombre, apellidos, email, emailx2, pass, passx2, 
     alert("El correo ya está registrado");
     return;
   }
-  usuarios.push({run,nombre,apellidos,correo: email,password: pass,telefono: cel,fechaNacimiento: fechaNac,direccion,tipoUsuario: tipo,region,comuna});
+usuarios.push({run, name: nombre, lastName: apellidos, correo: email,password: pass,telefono: cel, fechaNacimiento: fechaNac || null, direccion,rol: tipo,
+  region,
+  commune: comuna
+});
 
   localStorage.setItem("usuarios", JSON.stringify(usuarios));
   alert("Usuario registrado correctamente");
@@ -142,3 +145,101 @@ window.onload = function() {
     mostrarUsuarios();
     mostrarAlimentos();
 };
+
+
+// -------------------- poblarRegiones --------------------
+function poblarRegiones() {
+// Captura el select de región del HTML
+  const selRegion = document.getElementById('region');
+
+//Limpia las opciones anteriores y deja "Seleccione region" por defecto
+  selRegion.innerHTML = '<option value="">Seleccione región</option>';
+
+// Recorre las claves de REGIONES y por cada una añade un <option> con ese texto
+  Object.keys(REGIONES).forEach(r => selRegion.add(new Option(r, r)));
+}
+
+
+
+// Arreglo complementario: regiones -> comunas
+const REGIONES = {
+  "Región Metropolitana": [
+    "Santiago", "Maipú", "Puente Alto", "La Florida", "Las Condes", "Ñuñoa", "Providencia", "La Reina", "Pudahuel", "Cerro Navia"
+  ],
+  "Región del Maule": [
+    "Talca", "Linares", "Curicó", "San Clemente", "San Javier", "Longaví", "Parral", "Maule"
+  ],
+  "Región del Biobío": [
+    "Concepción", "Talcahuano", "Hualpén", "San Pedro de la Paz", "Chiguayante", "Los Ángeles", "Lota", "Coronel"
+  ],
+  "Región de Ñuble": [
+    "Chillán", "Chillán Viejo", "San Carlos", "Bulnes", "Quillón", "Yungay"
+  ],
+  "Región de La Araucanía": [
+    "Temuco", "Padre Las Casas", "Villarrica", "Pucón", "Angol", "Victoria"
+  ]
+};
+
+
+// -------------------- poblarComunas --------------------
+// Creación de la función (llena el <select id="comuna"> según la región entregada en el parametro)
+function poblarComunas(region) {
+// Capturo el select de comuna del HTML
+  const selComuna = document.getElementById('comuna');
+
+// Limpia las opciones anteriores y deja "seleccione comuna" por defecto
+  selComuna.innerHTML = '<option value="">Seleccione comuna</option>';
+
+// Si la región existe en REGIONES...
+  if (REGIONES[region]) {
+    //recorre el arreglo de comunas y agrego un <option> por cada una
+    REGIONES[region].forEach(c => selComuna.add(new Option(c, c)));
+    // Habilito el select porque ya tiene opciones válidas
+    selComuna.disabled = false;
+  } else {
+    // Si la región no existe (o está vacía), deshabilita el select de comunas
+    selComuna.disabled = true;
+  }
+}
+
+// -------------------- Inicialización al cargar la página --------------------
+document.addEventListener('DOMContentLoaded', () => {
+  // Llenar regiones al cargar
+  poblarRegiones();
+
+  // Cambiar comunas al cambiar región
+  document.getElementById('region').addEventListener('change', (e) => {
+    poblarComunas(e.target.value);
+  });
+});
+
+
+// Enlazar el formulario de registro del admin
+const formulario = document.getElementById("form-registro-admin");
+if (formulario) {
+  formulario.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const run = document.getElementById("run").value;
+    const nombre = document.getElementById("nombre").value;
+    const apellidos = document.getElementById("apellidos").value;
+    const email = document.getElementById("email").value;
+    const email2 = document.getElementById("email2").value;
+    const pass = document.getElementById("password").value;
+    const pass2 = document.getElementById("password2").value;
+    const cel = document.getElementById("cel").value;
+    const nacimiento = document.getElementById("nacimiento").value;
+    const rol = document.getElementById("rol").value;
+    const region = document.getElementById("region").value;
+    const comuna = document.getElementById("comuna").value;
+    const direccion = document.getElementById("direccion").value;
+
+    registrarUsuario(
+      run, nombre, apellidos, email, email2, pass, pass2,
+      cel, nacimiento, direccion, rol, region, comuna
+    );
+
+    formulario.reset()
+
+  });
+}
