@@ -13,30 +13,71 @@
 <body>
     
         <nav class="nav-admin"> 
-        <div class="contenedor-navbar-admin">
+            <div class="contenedor-navbar-admin">
 
-            <div class="contenedor-titulo-navbar-admin">
-                <img src="assests/img/logo-huerto-hogar.png" alt="logo empresa">
+                <div class="contenedor-titulo-navbar-admin">
+                    <img src="assests/img/logo-huerto-hogar.png" alt="logo empresa">
+                </div>
+
+                <div class="contenedor-enlaces-admin">
+                    <div class="container-fluid-admin">
+                        <a href="home_admin.html"><img src="assests/img/barra-navegacion/logo-home.png" alt="home">Inicio</a>
+                    </div>
+
+                    <div class="container-fluid-admin">
+                        <a href="listado_usuarios_admin.html"><img src="assests/img/barra-navegacion/logo-usuario.png" alt="usuario">Usuarios</a>
+                    </div>
+
+                    <div class="container-fluid-admin">
+                        <a href="listado_productos_admin.html"><img src="assests/img/barra-navegacion/logo-producto.png" alt="productos">Productos</a>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </nav>
+
+        <main class="contenido-admin-producto">
+            <div class="barra-acciones">
+            <button id="btn-agregar" class="btn-agregar-producto">+ Agregar producto</button>
+
+                <div class="filtro-categoria">
+                    <label for="filtroCategoria">Categoría: </label>
+                    <select id="filtroCategoria">
+                        <option value="">Todas</option>
+                        <option>Frutas Frescas</option>
+                        <option>Verduras Orgánicas</option>
+                        <option>Productos Orgánicos</option>
+                        <option>Productos Lácteos</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="contenedor-enlaces-admin">
-                <div class="container-fluid-admin">
-                    <a href="home_admin.html"><img src="assests/img/barra-navegacion/logo-home.png" alt="home">Inicio</a>
-                </div>
-
-                <div class="container-fluid-admin">
-                    <a href="listado_usuarios_admin.html"><img src="assests/img/barra-navegacion/logo-usuario.png" alt="usuario">Usuarios</a>
-                </div>
-
-                <div class="container-fluid-admin">
-                    <a href="listado_productos_admin.html"><img src="assests/img/barra-navegacion/logo-producto.png" alt="productos">Productos</a>
-                </div>
-
+            <div class="caja-tabla">
+                <table id="tablaProductos" class="display">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Categoría</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                        </tr>
+                    </thead>
+                </table>
             </div>
+        </main>
 
 
-        </div>
-    </nav>
+
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+
+    <script src="funciones.js"></script>
+    <script src="scriptProductoAdmin.js"></script>
 
 
 </body>

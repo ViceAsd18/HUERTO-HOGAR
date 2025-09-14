@@ -36,41 +36,47 @@
         </div>
     </nav>
 
-    <main>
-        <div class="contenedor-lista-usuario">
-            <div class="header-lista-usuario">
-                
-                <div class="header-titulo-lista-usuario">
-                    <h1>Usuarios</h1>
-                    <a class="btn btn-primary" href="registro_usuario_admin.html">Nuevo Usuario</a>
+    <main class="contenido-admin-usuario modulo-usuarios">
+        <div class="barra-acciones-usuario">
+            <a class="btn btn-primary" href="registro_usuario_admin.html">Nuevo Usuario</a>
+            <div class="acciones-derecha">
+                <div class="filtro-rol">
+                <label for="filtroRol">Rol:</label>
+                <select id="filtroRol">
+                    <option value="">Todos</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Cliente">Cliente</option>
+                    <option value="Vendedor">Vendedor</option>
+                </select>
                 </div>
             </div>
+        </div>
 
-            <!-- Tabla de usuarios -->
-            <div class="tabla-usuarios">
-                <table id="tablaUsuarios">
-                    <thead>
-                        <tr>
+        <div class="caja-tabla-usuario">
+            <table id="tablaUsuarios" class="display">
+                <thead>
+                    <tr>
                         <th>RUN</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>Correo</th>
                         <th>Rol</th>
-                        <th>Region</th>
+                        <th>Región</th>
                         <th>Comuna</th>
-                        <th></th> <!-- ELIMINAR USUARIO -->
-                        </tr>
-                    </thead>
-                    
-                    <tbody id="tbodyUsuarios">
-                        
-                    </tbody>
-                </table>
-            </div>            
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+            </table>
         </div>
     </main>
 
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+
     <script src="scriptUsuariosAdmin.js"></script>
+
+
 
 </body>
 </html>

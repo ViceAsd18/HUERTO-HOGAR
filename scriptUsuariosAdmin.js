@@ -1,37 +1,42 @@
-//Carga usuarios en la tabla
-function cargarUsuarios() {
-    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-    const tbody = document.getElementById("tbodyUsuarios");
-    tbody.innerHTML = "";
+$(function () {
+  //Leer usuarios del localStorage
+  let usuarios = JSON.parse(localStorage.getItem('usuarios') || '[]');
 
-    usuarios.forEach((u, index) => {
-    const fila = `
-        <tr>
-        <td>${u.run}</td>
-        <td>${u.name}</td>
-        <td>${u.lastName}</td>
-        <td>${u.correo}</td>
-        <td>${u.rol}</td>
-        <td>${u.region}</td>
-        <td>${u.commune}</td>
-        
-        <td>
-            <button class="btn-eliminar-usuario-admin" onclick="eliminarUsuario(${index})">Eliminar</button>
-        </td>
-        </tr>
-    `;
-    tbody.innerHTML += fila;
-    });
-    }
-
-function eliminarUsuario(index) {
-    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-    if(confirm("¿Seguro que quieres eliminar este usuario?")) {
-      usuarios.splice(index, 1);
-      localStorage.setItem("usuarios", JSON.stringify(usuarios));
-      cargarUsuarios(); // recargo la tabla
-    }
-  }
+  //Inicializar DataTable
+  const tabla = $('#tablaUsuarios').DataTable({
+    data: usuarios,
+    columns: [
+      { data: 'run',      title: 'RUN' },
+      { data: 'name',     title: 'Nombre' },
+      { data: 'lastName', title: 'Apellido' },
+      { data: 'correo',   title: 'Correo' },
+      { data: 'rol',      title: 'Rol' },
+      { data: 'region',   title: 'Región' },
+      { data: 'commune',  title: 'Comuna' },
+      {
+        data: null, title: 'Acciones',  
+        render: row => `<button class="btn-eliminar-usuario" data-run="${row.run}">Eliminar</button>`
+      }
+    ],
+    language: { url: 'https://cdn.datatables.net/plug-ins/1.13.8/i18n/es-ES.json' }
+  });
 
 
-document.addEventListener("DOMContentLoaded", cargarUsuarios);
+  //Filtrar por Rol
+  $('#filtroRol').on('change', function () {
+    tabla.column(4).search(this.value).draw();
+  });
+
+  //Eliminar por RUN 
+  $('#tablaUsuarios').on('click', '.btn-eliminar-usuario', function () {
+    const run = $(this).data('run');
+    if (!confirm(`¿Eliminar al usuario de run ${run}?`)) return;
+
+    //quitar del arreglo
+    usuarios = usuarios.filter(u => u.run !== run);
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+    //refrescar DataTable
+    tabla.clear().rows.add(usuarios).draw();
+  });
+});
