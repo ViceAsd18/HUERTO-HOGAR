@@ -46,10 +46,42 @@
             <div class="carrito-navegacion">
                 <a class="navbar-brand" href="carrito.html">Carrito</a>
                 <img src="assests/img/barra-navegacion/carrito-de-compras.png" alt="carrito de compras para el navabar">
-                <p></p>
+                <p id="contador-carrito"></p>
             </div>
         </div>
     </nav>
+
+     <!-- MAIN CARRITO -->
+    <main class="carrito">
+        <h1>Mi carrito de compras</h1>
+
+        <section class="carrito-contenedor">
+
+            <!-- LISTA DE ITEMS -->
+            <div id="carrito-lista">
+
+            </div>
+
+            <!-- RESUMEN -->
+            <aside class="carrito-resumen">
+            <div class="resumen-total">
+                <span>TOTAL:</span>
+                <strong id="total-precio">$0</strong>
+            </div>
+
+            <div class="resumen-cupon">
+                <input id="input-cupon" type="text" placeholder="Ingrese el cupón de descuento"/>
+                <button id="btn-aplicar-cupon" type="button">APLICAR</button>
+            </div>
+
+            <button id="btn-pagar" class="btn-pagar" type="button">PAGAR</button>
+            </aside>
+        </section>
+    </main>
+
+
+
+    <script src="scriptHome.js"></script>
 
 </body>
 </html>
