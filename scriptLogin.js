@@ -17,6 +17,14 @@ function loginUsuario(){
         return false; //lo mismo
     }
 
+    //Guarda sesion del usuario logueado
+    localStorage.setItem("usuarioLogueado", JSON.stringify({
+    run: usuario.run,
+    correo: usuario.correo,
+    rol: usuario.rol,
+    name: usuario.name,
+    lastName: usuario.lastName
+    }));
 
     // Decide destino según rol
     var destino
