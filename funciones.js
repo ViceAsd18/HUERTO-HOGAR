@@ -244,3 +244,5 @@ contRel.addEventListener('click', (e) => {
 });
 });
 // FIN PÁGINA DE DETALLE
+
+window.productos = productos;

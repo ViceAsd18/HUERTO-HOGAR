@@ -141,7 +141,6 @@ if (formulario) {   // solo si existe
 
     // Si todo salió bien, limpio el formulario
     if (usuarioRegistrar) {
-      formulario.reset();
       document.getElementById('comuna').disabled = true;
 
       //Redirigir al login
