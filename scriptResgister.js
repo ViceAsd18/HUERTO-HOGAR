@@ -27,7 +27,7 @@ function confirmarContraseña(passx1,passx2) {
 }
 
 
-function registrarUsuario(run,name,lastName,emailx1,emailx2,passx1,passx2,BirthDate,region,commune,rol){
+function registrarUsuario(run,name,lastName,emailx1,emailx2,passx1,passx2,BirthDate,region,commune,rol,cel){
     
     if(!validarEmail(emailx1)) return false;
     if(!confirmarEmail(emailx1,emailx2)) return false;
@@ -39,7 +39,7 @@ function registrarUsuario(run,name,lastName,emailx1,emailx2,passx1,passx2,BirthD
         return;
     }
       // Guardar (usar los nombres correctos)
-  usuarios.push({run,name,lastName, correo: emailx1, password: passx1, fechaNacimiento: BirthDate || null, region, commune, rol
+  usuarios.push({run,name,lastName, correo: emailx1, password: passx1, fechaNacimiento: BirthDate || null, region, commune, rol,cel
   });
     //guardamos y actualizamos a JSON
     localStorage.setItem("usuarios",JSON.stringify(usuarios))
@@ -112,11 +112,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+const formulario = document.getElementById("form-registro");
 
-const formulario = document.getElementById('form-registro');
-  formulario.addEventListener('submit', function (e) {
+if (formulario) {   // solo si existe
+  formulario.addEventListener("submit", function (e) {
     e.preventDefault();
-
     const run        = document.getElementById('run').value;
     const name       = document.getElementById('nombre').value;
     const lastName   = document.getElementById('apellidos').value;
@@ -127,6 +127,7 @@ const formulario = document.getElementById('form-registro');
     const birthDate  = document.getElementById('nacimiento').value;
     const region     = document.getElementById('region').value;
     const commune    = document.getElementById('comuna').value;
+    const telefono   = document.getElementById('cel').value
 
     // Llamar a la función que guarda en localStorage
     const usuarioRegistrar = registrarUsuario(
@@ -134,7 +135,8 @@ const formulario = document.getElementById('form-registro');
       email1, email2,
       pass1, pass2,
       birthDate, region, commune,
-      "cliente"
+      "cliente",
+      telefono
     );
 
     // Si todo salió bien, limpio el formulario
@@ -146,4 +148,6 @@ const formulario = document.getElementById('form-registro');
       window.location.href = "login.html"
 
     }
+
   });
+}

@@ -33,8 +33,6 @@
                 </div>
 
             </div>
-
-
         </div>
     </nav>
 
@@ -44,16 +42,35 @@
                 
                 <div class="header-titulo-lista-usuario">
                     <h1>Usuarios</h1>
-                    <button class="btn btn-primary">Nuevo Usuario</button>
-                </div>
-
-                <div class="header-notificacion">
-                    <a href=""><img src="assests/img/admin/logo-notificacion.png" alt="notificacion"></a>
+                    <a class="btn btn-primary" href="registro_usuario_admin.html">Nuevo Usuario</a>
                 </div>
             </div>
+
+            <!-- Tabla de usuarios -->
+            <div class="tabla-usuarios">
+                <table id="tablaUsuarios">
+                    <thead>
+                        <tr>
+                        <th>RUN</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo</th>
+                        <th>Rol</th>
+                        <th>Region</th>
+                        <th>Comuna</th>
+                        <th></th> <!-- ELIMINAR USUARIO -->
+                        </tr>
+                    </thead>
+                    
+                    <tbody id="tbodyUsuarios">
+                        
+                    </tbody>
+                </table>
+            </div>            
         </div>
     </main>
 
+    <script src="scriptUsuariosAdmin.js"></script>
 
 </body>
 </html>
