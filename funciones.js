@@ -36,6 +36,11 @@ const productos = [
   ];
 
 
+
+
+
+
+
 //UTILIDADES
 function obtenerProductoPorId(id) {
   return productos.find(producto => producto.id === id);
@@ -48,6 +53,10 @@ function obtenerRelacionadosPorCategoria(idProducto) {
 
   return productos.filter(p => p.categoria === producto.categoria && p.id !== idProducto);
 }
+
+
+
+
 
 // FUNCIONES PARA MOSTRAR PRODUCTOS EN EL HTML
 // =========================================
@@ -78,7 +87,7 @@ function agregarCardProducto(producto) {
                 data-precio="${producto.precio}">
           Añadir
         </button>
-      </div>
+      </div>  
     </div>
   `;
 }
@@ -104,21 +113,23 @@ subirProductos(productos);
 
 
 // Navegar al detalle al hacer click en la card (excepto el botón "Añadir")
-if (contenedorProductos){
+if (contenedorProductos) {
   contenedorProductos.addEventListener('click', (e) => {
-    // Si fue el botón "Añadir", no navegamos
-    if (e.target.closest('.btn-agregar')) return;
+    // Si fue el botón "Añadir" => agregar al carrito
+    const btn = e.target.closest('.btn-agregar');
+    if (btn) {
+      e.stopPropagation(); // evita que también navegue al detalle
+      const id = btn.dataset.id;
+      if (id) agregarAlCarritoPorId(id);
+      return;
+    }
 
-    //El .target captura el elemento donde se hizo click
-    //.closest Sube desde el elemento clickeado hasta encontrar al elemento padre con la clase .producto-card (para luego obtener su id)
+    //Si se hizo click en la card (pero NO en el botón) => ir al detalle
     const card = e.target.closest('.producto-card');
-
-    // Tomar el id del producto desde data-id
+    if (!card) return;
     const id = card.dataset.id;
-    // Redirigir a la página de detalle con el id en la URL
     window.location.href = `detalle_producto.html?id=${id}`;
-
-  });  
+  });
 }
 
 

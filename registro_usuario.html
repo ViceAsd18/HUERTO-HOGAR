@@ -12,65 +12,128 @@
 </head>
 <body>
     
-        <nav class="nav-admin"> 
-        <div class="contenedor-navbar-admin">
-
-            <div class="contenedor-titulo-navbar-admin">
-                <img src="assests/img/logo-huerto-hogar.png" alt="logo empresa">
+    <nav class="nav-cliente">
+        <div class="contenedor-navegacion">
+            <div class="titulo-navegacion">
+                <h3>HUERTO HOGAR</h3>
             </div>
 
-            <div class="contenedor-enlaces-admin">
-                <div class="container-fluid-admin">
-                    <a href="home_admin.html"><img src="assests/img/barra-navegacion/logo-home.png" alt="home">Inicio</a>
+
+            <div class="enlaces-navegacion">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="home.html">Home</a>
                 </div>
 
-                <div class="container-fluid-admin">
-                    <a href="listado_usuarios_admin.html"><img src="assests/img/barra-navegacion/logo-usuario.png" alt="usuario">Usuarios</a>
+                <div class="container-fluid">       
+                    <a class="navbar-brand" href="productos.html">Productos</a>
                 </div>
 
-                <div class="container-fluid-admin">
-                    <a href="listado_productos_admin.html"><img src="assests/img/barra-navegacion/logo-producto.png" alt="productos">Productos</a>
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="nosotros.html">Nosotros</a>
                 </div>
 
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="blog.html">Blogs</a>
                 </div>
 
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="contacto.html">Contacto</a>
+                </div>
 
+            </div>
+
+
+            <div class="carrito-navegacion">
+                <a class="navbar-brand" href="carrito.html">Carrito</a>
+                <img src="assests/img/barra-navegacion/carrito-de-compras.png" alt="carrito de compras para el navabar">
+                <p></p>
+            </div>
         </div>
     </nav>
 
+    <main class="main-form">
+        <section class="form-card form-registro">
 
+        <form action="#" id="form-registro">
+            <h2>Registro de usuarios</h2>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-contenedor">
-                <div class="footer-logo">
-                    <img src="assests/img/logo-huerto-hogar.png"
-                         alt="Logo Huerto Hogar"
-                         class="footer-logo">
+            <div class="col-12">
+                <label for="run" class="form-label">RUN (sin puntos ni guion)</label>
+                <input type="text" class="form-control" id="run" name="run" required minlength="7" maxlength="9" placeholder="19011022K">
+            </div>
+
+            <div class="col-12">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required maxlength="50">
+            </div>
+
+             <div class="col-12">
+                <label for="apellidos" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="apellidos" name="apellidos" required maxlength="100">
+            </div>
+
+            <div class="col-12">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" name="email" required maxlength="100">
+            </div>
+
+            <div class="col-12">
+                <label for="confirm-email" class="form-label">Confirmar correo electrónico</label>
+                <input type="email" class="form-control" id="confirm-email" name="confirmEmail" required maxlength="100">
+            </div>
+
+            <div class="col-12">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" name="password" required minlength="4" maxlength="10">
+            </div>
+
+            <div class="col-12">
+                <label for="confirmPassword" class="form-label">Confirmar contraseña</label>
+                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required minlength="4" maxlength="10">
+            </div>
+
+            <div class="col-12">
+                <label for="cel" class="form-label">Teléfono</label>
+                <input type="number" class="form-control" id="cel" maxlength="15" placeholder="Ej: 912345678">
+            </div>
+ 
+            <div class="col-12">
+                <label for="nacimiento" class="form-label">Fecha de nacimiento (opcional)</label>
+                <input type="date" class="form-control" id="nacimiento" name="nacimiento">
+            </div>
+
+           <div class="contenedor-region-comuna">
+                <div class="col-5">
+                    <label for="region" class="form-label">Región</label>
+                    <select class="form-control" id="region" name="region" required>
+                        <option value="">Seleccione región</option>
+                    </select>
                 </div>
-                <div class="footer-col ">
-                    <h3>Huerto Hogar</h3>
-                    <p>Tienda chilena con más de 6 años de experiencia que promueve un estilo de vida saludable y sostenible</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Enlaces rápidos</h4>
-                    <ul>
-                        <li><a href="home.html">Inicio</a></li>
-                        <li><a href="productos.html">Productos</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contacto</h4>
-                    <p>Email: contacto@huertohogar.cl</p>
-                    <p>Tel: +56 9 1234 5678</p>
-                    <p>Santiago, Chile</p>
+
+                <div class="col-5">
+                    <label for="comuna" class="form-label">Comuna</label>
+                    <select class="form-control" id="comuna" name="comuna" required disabled>
+                        <option value="">Seleccione comuna</option>
+                    </select>
                 </div>
             </div>
-            <div class="footer-final">
-                <p>&copy; 2025 Huerto Hogar. Todos los derechos reservados.</p>
+
+        
+
+            <div class="col-12">
+                <label for="direccion" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="direccion" name="direccion"
+                required maxlength="300" placeholder="Calle, número, depto.">
             </div>
-        </footer>
+
+            <button class="btn btn-primary " type="submit">Registrar</button>
+    
+        </form>
+
+        </section>
+    </main>
+
+    <script src="scriptResgister.js"></script>
+    
 </body>
 </html>
