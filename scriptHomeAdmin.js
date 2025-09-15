@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const saludoDiv = document.getElementById("nombre-admin");
     if (saludoDiv) {
-        saludoDiv.textContent = `Bienvenido ${usuarioLogueado.nombre} ❀˖ ° !`;
+        saludoDiv.textContent = `Bienvenido ${usuarioLogueado.name} ❀˖ ° !`;
     }
 });
 

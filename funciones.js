@@ -76,6 +76,57 @@ function obtenerRelacionadosPorCategoria(idProducto) {
 }
 
 
+function generarIdProducto(categoria) {
+  // Relaciona cada categoría con un prefijo
+  const prefijos = {
+    "Frutas Frescas": "FR",
+    "Verduras Orgánicas": "VR",
+    "Productos Orgánicos": "PO",
+    "Productos Lácteos": "PL"
+  };
+
+  // Obtener el prefijo correspondiente según la categoría
+  const prefix = prefijos[categoria];
+  if (!prefix) {
+    throw new Error("Categoría inválida"); // Si no existe en el mapa
+  }
+
+  // Obtener la lista actual de productos (de localStorage o iniciales)
+  const lista = obtenerProductos();
+
+  let max = 0;
+
+  // Recorrer los productos ya existentes
+  for (const p of lista) {
+    if (p.id.startsWith(prefix)) {   // Si coincide con el prefijo (ej: "FR")
+      const num = parseInt(p.id.slice(prefix.length), 10); // Tomar solo los números
+      if (!isNaN(num) && num > max) {
+        max = num; // Actualizar el mayor número encontrado
+      }
+    }
+  }
+
+  // Sumar 1 al mayor número y formatear con 3 dígitos (ej: 001, 002, 010)
+  const siguiente = (max + 1).toString().padStart(3, "0");
+
+  // Devolver prefijo + correlativo, ej: "FR004"
+  return prefix + siguiente;
+}
+
+
+//Obtiene los productos del arreglo y los que se agregan con localstorage
+function obtenerProductos() {
+
+  const productosIniciales = window.productos;
+
+  let guardados = JSON.parse(localStorage.getItem("productos"));
+  if (!guardados || guardados.length === 0) {
+    localStorage.setItem("productos", JSON.stringify(productosIniciales));
+    return productosIniciales;
+  }
+  return guardados;
+}
+
 
 
 
@@ -267,3 +318,5 @@ contRel.addEventListener('click', (e) => {
 // FIN PÁGINA DE DETALLE
 
 window.productos = productos;
+
+

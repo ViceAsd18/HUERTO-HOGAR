@@ -1,3 +1,31 @@
+// Crear admin por defecto si no existe
+(function crearAdminPorDefecto() {
+    let usuarios;
+    try {
+        usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+    } catch {
+        usuarios = [];
+    }
+
+        const existeAdmin = usuarios.some(u => u.rol === "admin");
+
+        if (!existeAdmin) {
+            const admin = {
+                run: "11111111-1",
+                name: "Admin",
+                lastName: "Default",
+                correo: "admin@duoc.cl",
+                password: "admin123@",
+                rol: "admin",
+                region: "N/A",
+                commune: "N/A"
+    };
+        usuarios.push(admin);
+        localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    }
+    })();
+
+
 function loginUsuario(){
 
     // Capturo los valores del formulario

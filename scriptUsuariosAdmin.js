@@ -15,7 +15,7 @@ $(function () {
       { data: 'commune',  title: 'Comuna' },
       {
         data: null, title: 'Acciones',  
-        render: row => `<button class="btn-eliminar-usuario" data-run="${row.run}">Eliminar</button>`
+        render: row => `<button class="btn-eliminar-usuario-admin" data-run="${row.run}">Eliminar</button>`
       }
     ],
     language: { url: 'https://cdn.datatables.net/plug-ins/1.13.8/i18n/es-ES.json' }
