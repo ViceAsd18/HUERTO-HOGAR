@@ -14,8 +14,8 @@
 
         <nav class="nav-cliente">
         <div class="contenedor-navegacion">
-            <div class="titulo-navegacion">
-                <h3>HUERTO HOGAR</h3>
+            <div class="logo-navegacion">
+                <img src="assests/img/logo-huerto-hogar.png" alt="logo-huerto-hogar">
             </div>
 
 
@@ -42,8 +42,15 @@
 
                 </div>
 
+            <!-- Enlaces para iniciar sesión y registrar usuario -->
 
-                <div class="carrito-navegacion">
+            <div class="link-login-registro">
+                <a href="login.html">Iniciar sesión</a> |
+                <a href="registro_usuario.html">Registrate</a>
+            </div>
+
+
+            <div class="carrito-navegacion">
                     <a class="navbar-brand" href="carrito.html">Carrito</a>
                     <img src="assests/img/barra-navegacion/carrito-de-compras.png" alt="carrito de compras para el navabar">
                     <p id="contador-carrito"></p>
@@ -51,13 +58,13 @@
             </div>
         </nav>
 
-    <button id="btn-logout" class="btn-logout">Cerrar sesión</button>
+    <button id="btn-logout" class="btn-logout">Cerrar sesión</button> <!--BTN DE PRUEBA LUEGO SE CAMBIA DE POSICION-->
 
 
     <main id="contenido-principal-home">
         <section class="hero-home">
             <div class="hero-content-home">
-                <h1>Productos frescos a la puerta de tu casa</h1>
+                <h1> 🌱🏡 Lo mejor de la tierra, directo a tu mesa 🏡🌱</h1>
             </div>
         </section>
 
@@ -65,7 +72,7 @@
             <h2>Productos sugeridos...</h2>
             <div class="grid">
 
-                <article>
+                <article class ="producto-sugerido" data-id="FR001">
                     <div class="card-home">
                         <img src="assests/img/productos/manzana-fuji/manzana-fuji-1.png" alt="Manzana Fuji">
                         <h3>Manzana Fuji</h3>
@@ -73,7 +80,7 @@
                     </div>
                 </article>
 
-                <article>
+                <article class ="producto-sugerido" data-id="FR002">
                     <div class="card-home">
                         <img src="assests/img/productos/naranja-valencia/naranja-valencia-1.png" alt="Naranjas Valencia">
                         <h3>Naranjas Valencia</h3>
@@ -81,7 +88,7 @@
                     </div>
                 </article>
 
-                <article>
+                <article class ="producto-sugerido" data-id="FR003">
                     <div class="card-home">
                         <img src="assests/img/productos/platanos-cavendish/platanos-cavendish-1.jpg" alt="Platanos Cavendish">
                         <h3>Plátanos Cavendish</h3>
@@ -89,7 +96,7 @@
                     </div>
                 </article>
 
-                <article>
+                <article class ="producto-sugerido" data-id="VR001">
                     <div class="card-home">
                         <img src="assests/img/productos/zanahoria-organica/zanahoria-organica-1.jpg" alt="Zanahoria Organica">
                         <h3>Zanahoria Orgánica</h3>
@@ -97,7 +104,7 @@
                     </div>
                 </article>
 
-                <article>
+                <article class ="producto-sugerido" data-id="VR002">
                     <div class="card-home">
                         <img src="assests/img/productos/espinacas-frescas/espinacas-frescas-1.jpg" alt="Espinacas Frescas">
                         <h3>Espinacas Frescas</h3>
@@ -105,7 +112,7 @@
                     </div>
                 </article>
 
-                <article>
+                <article class ="producto-sugerido" data-id="VR003">
                     <div class="card-home">
                         <img src="assests/img/productos/pimiento-tricolor/pimiento-tricolor-1.jpg" alt="Pimiento Tricolor">
                         <h3>Pimientos tricolores</h3>
@@ -113,7 +120,7 @@
                     </div>
                 </article>
 
-                <article>
+                <article class ="producto-sugerido" data-id="PO001">
                     <div class="card-home">
                         <img src="assests/img/productos/miel-organica/miel-organica-1.jpg" alt="Miel Organica">
                         <h3>Miel Orgánica</h3>
@@ -121,6 +128,21 @@
                     </div>
                 </article>
 
+                <article class ="producto-sugerido" data-id="PO003">
+                    <div class="card-home">
+                        <img src="assests/img/productos/quinoa-organica/quinoa-organica-1.png" alt="Quinua Organica">
+                        <h3>Quinua Orgánica</h3>
+                        <p>$4.500</p>
+                    </div>
+                </article>
+
+                <article class ="producto-sugerido" data-id="PL001">
+                    <div class="card-home">
+                        <img src="assests/img/productos/leche-entera/leche-entera-1.png" alt="Leche entera">
+                        <h3>Leche Entera</h3>
+                        <p>$1.200</p>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
@@ -159,7 +181,19 @@
             </div>
         </footer>
 
+        <script src="funciones.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const sugeridos = document.querySelectorAll(".producto-sugerido");
 
+                sugeridos.forEach(card => {
+                    card.addEventListener("click", () => {
+                        const id = card.dataset.id;
+                        window.location.href = `detalle_producto.html?id=${id}`;
+                    });
+                });
+            });
+        </script>
         <script src="scriptHome.js"></script>
 
     </body>
