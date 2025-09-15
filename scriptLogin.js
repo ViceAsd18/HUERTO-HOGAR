@@ -33,7 +33,9 @@ function loginUsuario(){
         destino = "home_admin.html";
     } else if (usuario.rol === "cliente") {
         destino = "home.html";
-    } 
+    } else {
+        destino = "home.html";
+    }
 
     //Redirección
     window.location.href = destino;

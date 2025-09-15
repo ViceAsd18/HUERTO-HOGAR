@@ -36,11 +36,9 @@
         </div>
     </nav>
 
-    <main class="contenido-admin-usuario modulo-usuarios">
+    <main class="main-admin modulo-usuarios">
         <div class="barra-acciones-usuario">
-            <a class="btn btn-primary" href="registro_usuario_admin.html">Nuevo Usuario</a>
-            <div class="acciones-derecha">
-                <div class="filtro-rol">
+            <div class="filtro-rol">
                 <label for="filtroRol">Rol:</label>
                 <select id="filtroRol">
                     <option value="">Todos</option>
@@ -48,8 +46,12 @@
                     <option value="Cliente">Cliente</option>
                     <option value="Vendedor">Vendedor</option>
                 </select>
-                </div>
             </div>
+
+            <a id="btn-agregar-usuario" class="btn-agregar-usuario" href="registro_usuario_admin.html">
+                + Agregar usuario
+            </a>
+        </div>
         </div>
 
         <div class="caja-tabla-usuario">

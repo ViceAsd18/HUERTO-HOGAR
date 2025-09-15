@@ -38,6 +38,61 @@
             </div>
         </nav>
 
+        <main class="main-admin form-producto">
+            <h2>Agregar Producto</h2>
+            <form id="formProducto">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre del producto</label>
+                    <input type="text" class="form-control" id="nombre" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="categoria" class="form-label">Categoría</label>
+                    <select id="categoria" class="form-select" required>
+                        <option value="">Seleccione...</option>
+                        <option>Frutas Frescas</option>
+                        <option>Verduras Orgánicas</option>
+                        <option>Productos Orgánicos</option>
+                        <option>Productos Lácteos</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="precio" class="form-label">Precio</label>
+                    <input type="number" class="form-control" id="precio" min="0" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="stock" class="form-label">Stock</label>
+                    <input type="number" class="form-control" id="stock" min="0" required>
+                </div>
+
+                <button type="submit" class="btn-agregar-producto">Guardar Producto</button>
+                <a href="listado_productos_admin.html" class="btn-volver">Volver</a>
+            </form>
+        </main>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script>
+            $("#formProducto").on("submit", function(e) {
+                e.preventDefault();
+
+                const producto = {
+                    id: Date.now(),
+                    nombre: $("#nombre").val(),
+                    categoria: $("#categoria").val(),
+                    precio: $("#precio").val(),
+                    stock: $("#stock").val(),
+                };
+
+                let productos = JSON.parse(localStorage.getItem("productos")) || [];
+                productos.push(producto);
+                localStorage.setItem("productos", JSON.stringify(productos));
+
+                alert("✅ Producto agregado correctamente");
+                window.location.href = "listado_productos_admin.html";
+            });
+        </script>
 
 </body>
 </html>

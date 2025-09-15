@@ -188,3 +188,22 @@ function mostrarCarrito() {
 
 // Arranque
 document.addEventListener("DOMContentLoaded", inicializarMenu);
+
+// --- Creación de admin automaticamente luego de hacer doble click en el botón oculto en el logo
+//                         para ingresar al "home_admin.html              ---
+document.addEventListener("DOMContentLoaded", () => {
+  const logo = document.querySelector(".logo-navegacion img");
+  if (logo) {
+    logo.addEventListener("dblclick", () => {
+      // Crear un usuario admin temporal en localStorage
+      localStorage.setItem("usuarioLogueado", JSON.stringify({
+        nombre: "Administrador",
+        correo: "admin@huertohogar.cl",
+        rol: "admin"
+      }));
+
+      // Redirigir al home de admin
+      window.location.href = "home_admin.html";
+    });
+  }
+});

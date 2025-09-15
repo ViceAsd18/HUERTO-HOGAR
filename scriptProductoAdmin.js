@@ -1,5 +1,5 @@
 $(function () {
-  const data = window.productos;
+  let data = JSON.parse(localStorage.getItem("productos")) || [];
 
   const tabla = $('#tablaProductos').DataTable({
     data,

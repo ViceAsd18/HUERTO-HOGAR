@@ -155,9 +155,13 @@ nav {
 
 
 
+/* Home admin */
+
+/* SIDE BAR ADMIN */
+
 .contenedor-navbar-admin {
     background-color: rgb(204, 200, 200);
-    width: 25vh;
+    width: 200px;
     height: 100vh; /*Utiliza la altura completa de la ventana*/
     position: fixed; 
     top: 0;
@@ -170,7 +174,9 @@ nav {
 }
 
 .contenedor-titulo-navbar-admin img {
-    width: 232px;
+    display: block;
+    width: 150px;
+    padding-top: 2rem;
 }
 
 .contenedor-enlaces-admin {
@@ -178,8 +184,7 @@ nav {
 }
 
 .container-fluid-admin {
-    margin: 1.5rem 0px 0rem 1.5rem;   
-
+    margin: 1.5rem 0px 0rem 1.5rem;
 }
 
 .container-fluid-admin a img {
@@ -195,8 +200,6 @@ nav {
 .contenedor-enlaces-admin img {
     width: 2rem;
     height: 2rem;
-
-
 }
 
 .titulo-navbar-admin {
@@ -206,6 +209,332 @@ nav {
     text-align: center;
     padding-bottom: 2rem;
 }
+
+/* TERMINO SIDE BAR ADMIN */
+
+.main-admin{
+    margin-left: 200px; /* Deja espacio para el side bar */
+    padding: 3rem;
+    background: #f5f6f8;
+    min-height: 100vh; /* Asegura que ocupe toda la altura visible */
+
+}
+.main-admin table{
+    width: 100%;
+}
+.main-admin p{
+    font-family: "Montserrat", sans-serif;
+    font-size: 35px;
+    color: #333333;
+    text-align: center;
+}
+.main-admin img{
+    display: block;
+    margin: 2rem auto;
+    width: 50%;
+    height: auto;
+}
+
+/*VISTA ADMIN*/
+
+/*LISTA USUARIOS*/
+.header-lista-usuario h1{
+
+}
+
+.contenedor-lista-usuario {
+    margin:0px 150px 0px 300px;
+    margin-top: 3rem;
+    padding: 1rem;
+}
+
+
+.header-titulo-lista-usuario {
+    display: flex;
+    gap: 20px;
+}
+
+.header-titulo-lista-usuario button {
+    background-color: black;
+    padding: 1.5rem;
+}
+
+.header-lista-usuario {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-notificacion img {
+    width: 30px;
+    height: 30px;
+}
+/*ADMIN LISTAR USUARIOS*/
+.contenedor-lista-usuario {
+    margin: 2rem 5rem 0 20rem ;
+    padding: 2rem;
+}
+
+.header-lista-usuario {
+    display: flex;
+}
+
+.header-titulo-lista-usuario {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.header-titulo-lista-usuario a{
+    padding: 1.5rem;
+}
+
+.header-titulo-lista-usuario a:hover{
+    background-color: #0056b3;
+}
+
+
+
+/* TABLA LISTADO USUARIOS */
+.barra-acciones-usuario{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.tabla-usuarios {
+    margin-top: 20px;
+    overflow-x: auto;
+    border: 2px solid black;
+}
+
+
+.tabla-usuarios table {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.tabla-usuarios th, .tabla-usuarios td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    font-size: 14px;
+}
+
+.tabla-usuarios th {
+    background: #f5f6f8;
+    font-weight: bold;
+}
+
+.btn-acciones-usuario {
+    background-color: #4CAF50; /* verde ecológico */
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-agregar-usuario {
+    display: inline-block;
+    background-color: #2E8B57;
+    color: white !important;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none !important; /* elimina subrayado */
+    transition: all 0.3s ease;
+}
+
+.btn-agregar-usuario:hover {
+    background-color: #1c5e1f;
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
+/* Filtro rol */
+.filtro-rol {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filtro-rol select {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.btn-eliminar-usuario-admin {
+    background: red;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-eliminar-usuario-admin:hover {
+    background: darkred;
+}
+
+/* ADMIN TABLA PRODUCTOS */
+.caja-tabla-productos {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 20px;
+    padding: 1rem;
+    background: #fff;
+}
+
+#tablaProductos {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    background: #fff;
+}
+
+#tablaProductos thead th {
+    background: #f5f6f8;
+    font-weight: bold;
+    padding: 12px;
+    border-bottom: 2px solid #ddd;
+    text-align: left;
+}
+
+#tablaProductos tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#tablaProductos tbody tr:hover {
+    background: #f9f9f9;
+}
+
+.barra-acciones-producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Botón de agregar producto */
+.btn-agregar-producto {
+    background-color: #2E8B57;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-agregar-producto:hover {
+    background-color: #45a049; /* verde más oscuro */
+    transform: scale(1.05); /* efecto agrandar */
+}
+
+/* Filtro categoría */
+.filtro-categoria {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filtro-categoria select {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* AGREGAR PRODUCTO */
+
+.form-producto {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.form-producto h2 {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-producto label {
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+
+.btn-agregar-producto {
+    background-color: #4CAF50;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin:0 70px;
+    display: inline-block;
+    min-width: 150px;
+    text-align: center;
+}
+
+.btn-agregar-producto:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.btn-volver {
+    background-color: #862727;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin:0 10px;
+    display: inline-block;
+    min-width: 150px;
+    text-align: center;
+}
+
+.btn-volver:hover {
+    text-decoration: underline;
+}
+
+
 
 /*HOME CLIENTE*/
 .btn-logout {
@@ -503,39 +832,6 @@ nav {
     height: 35px;
 }
 
-/*VISTA ADMIN*/
-/*LISTA USUARIOS*/
-.header-lista-usuario h1{
-
-}
-
-.contenedor-lista-usuario {
-    margin:0px 150px 0px 300px;
-    margin-top: 3rem;
-    padding: 1rem;
-}
-
-
-
-.header-titulo-lista-usuario {
-    display: flex;
-    gap: 20px;
-}
-
-.header-titulo-lista-usuario button {
-    background-color: black;
-    padding: 1.5rem;
-}
-
-.header-lista-usuario {
-    display: flex;
-    justify-content: space-between;
-}
-
-.header-notificacion img {
-    width: 30px;
-    height: 30px;
-}
 
 /* Nosotros */
 
@@ -958,71 +1254,7 @@ nav {
 }
 
 
-/*ADMIN LISTAR USUARIOS*/
-.contenedor-lista-usuario {
-    margin: 2rem 5rem 0 20rem ;
-    padding: 2rem;
-}
 
-.header-lista-usuario {
-    display: flex;
-}
-
-.header-titulo-lista-usuario {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.header-titulo-lista-usuario a{
-    padding: 1.5rem;
-}
-
-.header-titulo-lista-usuario a:hover{
-    background-color: #0056b3;
-}
-
-
-
-    /* TABLA LISTADO USUARIOS */
-.tabla-usuarios {
-    margin-top: 20px;
-    overflow-x: auto;
-    border: 2px solid black;
-}
-
-
-.tabla-usuarios table {
-    width: 100%;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-.tabla-usuarios th, .tabla-usuarios td {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
-    font-size: 14px;
-}
-
-.tabla-usuarios th {
-    background: #f5f6f8;
-    font-weight: bold;
-}
-
-.btn-eliminar-usuario-admin {
-    background: red;
-    color: white;
-    border: none;
-    padding: 6px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.btn-eliminar-usuario-admin:hover {
-  background: darkred;
-}
 
 /*CARRITO*/
 

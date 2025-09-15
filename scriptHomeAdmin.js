@@ -44,9 +44,18 @@ function registrarUsuario(run, nombre, apellidos, email, emailx2, pass, passx2, 
     alert("El correo ya está registrado");
     return;
   }
-usuarios.push({run, name: nombre, lastName: apellidos, correo: email,password: pass,telefono: cel, fechaNacimiento: fechaNac || null, direccion,rol: tipo,
-  region,
-  commune: comuna
+usuarios.push({
+    run,
+    name: nombre,
+    lastName: apellidos,
+    correo: email,
+    password: pass,
+    telefono: cel,
+    fechaNacimiento: fechaNac || null,
+    direccion,
+    rol: tipo,
+    region,
+    commune: comuna
 });
 
   localStorage.setItem("usuarios", JSON.stringify(usuarios));
@@ -212,6 +221,24 @@ document.addEventListener('DOMContentLoaded', () => {
     poblarComunas(e.target.value);
   });
 });
+
+// -------------------- Bienvenida Administrador --------------------
+
+document.addEventListener("DOMContentLoaded", () => {
+    const usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
+
+    if (!usuarioLogueado || usuarioLogueado.rol !== "admin") {
+        alert("Acceso no autorizado. Debes iniciar sesión como admin.");
+        window.location.href = "login.html";
+        return;
+    }
+
+    const saludoDiv = document.getElementById("nombre-admin");
+    if (saludoDiv) {
+        saludoDiv.textContent = `Bienvenido ${usuarioLogueado.nombre} ❀˖ ° !`;
+    }
+});
+
 
 
 // Enlazar el formulario de registro del admin
